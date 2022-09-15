@@ -49,6 +49,7 @@ class DemoSequence(Dataset):
     def __getitem__(self, idx: int) -> dict:
         """Return the ith image converted to blob"""
         data = self.data[idx]
+        print("Inside Demo Sequence .. ", data)
         img = Image.open(data['im_path']).convert("RGB")
         width_orig, height_orig = img.size
 
